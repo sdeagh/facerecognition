@@ -8,6 +8,7 @@ import FaceRecognition from './components/faceRecognition/FaceRecognition';
 import Signin from './components/signin/Signin';
 import Particles from 'react-particles-js';
 import Register from './components/register/Register';
+import { Router, Route, Switch } from 'react-router';
 
 import Clarifai from 'clarifai';
 
@@ -44,7 +45,6 @@ class App extends Component {
 		const image = document.getElementById('inputImage');
 		const width = Number(image.width);
 		const height = Number(image.height);
-		console.log(width, height, clarifaiFace);
 		return {
 			leftCol: clarifaiFace.left_col * width,
 			topRow: clarifaiFace.top_row * height,
@@ -54,7 +54,6 @@ class App extends Component {
 	}
 
 	displayFaceBox = (box) => {
-		console.log(box)
 		this.setState({box: box})
 	}
 
@@ -63,6 +62,7 @@ class App extends Component {
 	}
 
 	onButtonSubmit = () => {
+		this.setState({ box: {} })
 		this.setState({imageUrl: this.state.input})
 		app.models.predict(
 			Clarifai.FACE_DETECT_MODEL, 
