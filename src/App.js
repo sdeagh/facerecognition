@@ -8,7 +8,7 @@ import FaceRecognition from './components/faceRecognition/FaceRecognition';
 import Signin from './components/signin/Signin';
 import Particles from 'react-particles-js';
 import Register from './components/register/Register';
-import { Router, Route, Switch } from 'react-router';
+// import { Router, Route, Switch } from 'react-router';
 
 import Clarifai from 'clarifai';
 
