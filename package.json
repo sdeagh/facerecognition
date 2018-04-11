@@ -7,11 +7,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",
-<<<<<<< HEAD
     "react-router-dom": "^4.2.2",
-=======
     "react-router": "^4.2.0",
->>>>>>> 45b89ee8c370490408e50ca00473c71fccc0af6c
     "react-scripts": "1.1.1",
     "react-tilt": "^0.1.4",
     "tachyons": "^4.9.1"
