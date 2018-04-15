@@ -13,7 +13,7 @@ import Register from './components/register/Register';
 import Clarifai from 'clarifai';
 
 const app = new Clarifai.App({
-	apiKey: process.env.CLARIFAI_API_KEY
+	apiKey: 'b59782d5a0f547e5a5a96e3a55680856'
 })
 
 const particleOptions = {
@@ -102,6 +102,7 @@ class App extends Component {
 				.then(entries => {
 					this.setState(Object.assign(this.state.user, { entries: entries }))
 				})
+				.catch(console.log)
 			}
 			this.displayFaceBoxes(this.calculateFaceLocation(response))
 		})
